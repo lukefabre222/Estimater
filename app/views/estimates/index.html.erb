@@ -1,0 +1,29 @@
+<% provide(:title, '見積もり一覧') %>
+<h1>見積もり一覧</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">No.</th>
+      <th scope="col">ネット環境</th>
+      <th scope="col">電話</th>
+      <th scope="col">TV視聴環境</th>
+      <th scope="col">住居形態</th>
+      <th scope="col">合計料金</th>
+      <th scope="col">作成日時</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @estimates.each do |estimate| %>
+    <tr>
+      <td><%= estimate.id %></td>
+      <td><%= estimate.net %></td>
+      <td><%= estimate.tel %></td>
+      <td><%= estimate.tv %></td>
+      <td><%= estimate.housing_form %></td>
+      <td><%= estimate.present_price %></td>
+      <td><%= estimate.created_at.strftime('%m/%d %H:%M') %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  net: MyString
+  tel: MyString
+  tv: MyString
+  present_price: 1
+  housing_form: MyString
+  user: one
+
+two:
+  net: MyString
+  tel: MyString
+  tv: MyString
+  present_price: 1
+  housing_form: MyString
+  user: two

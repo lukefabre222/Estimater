@@ -21,6 +21,9 @@
         </li>
         <% if user_signed_in? %>
           <li>
+            <%= link_to "my_page", my_page_path(current_user.id), class:"nav-link"%>
+          </li>
+          <li>
             <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"nav-link"%>
           </li>
         <% end %>

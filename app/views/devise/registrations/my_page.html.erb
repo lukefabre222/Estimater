@@ -1,2 +1,5 @@
 <h1>my_page</h1>
-<%= User.find(params[:id]).email %>
+<div class="col-md-6 offset-md-3 center">
+  <%= link_to "見積もり新規作成", new_user_estimate_path(@user), class: "btn btn-primary"%>
+  <%= link_to "見積もり一覧", user_estimates_path(@user), class:"btn btn-primary"%>
+</div>

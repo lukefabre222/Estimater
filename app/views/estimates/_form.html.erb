@@ -1,0 +1,23 @@
+  <div>  
+    <%= form_for @estimate, url: user_estimates_path, method: :post do |f| %>
+
+      <%= f.label :net %>
+      <%= f.text_field :net, class: "form-control" %>
+
+      <%= f.label :tel%>
+      <%= f.text_field :tel, class: "form-control" %>
+      
+      <%= f.label :tv %>
+      <%= f.text_field :tv, class:"form-control" %>
+      
+      <%= f.label :present_price %>
+      <%= f.number_field :present_price, class:"form-control" %>
+
+      <%= f.label :housing_form %>
+      <%= f.text_field :housing_form, class:"form-control" %>
+
+      <%= f.hidden_field :user_id, :value => current_user.id%>
+      
+      <%= f.submit yield(:button_text), class: "btn btn-primary col-md-6 offset-md-3"%>
+    <% end %>
+  </div>
